@@ -1,0 +1,2 @@
+[health]
+check_ports=[8092]
