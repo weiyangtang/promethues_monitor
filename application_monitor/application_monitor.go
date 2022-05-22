@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-func Init() {
+func init() {
 	go ServerHealthCheck()
 }
 
@@ -32,8 +32,7 @@ func checkPortHealthy() {
 		if isBind {
 			portBindCount = 1
 		}
-		prometheus.GaugeVecMetric(
-			consts.MetricsServerPortCount,
+		prometheus.GaugeVecPortCount(
 			float64(portBindCount),
 			map[string]string{consts.MetricsTagServerPort: strconv.Itoa(port)},
 		)

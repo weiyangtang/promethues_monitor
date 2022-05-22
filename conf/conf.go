@@ -5,7 +5,7 @@ import (
 	"log"
 )
 
-func Init() {
+func init() {
 	viper.SetConfigName("config")
 	viper.SetConfigType("toml")
 	viper.AddConfigPath("./")

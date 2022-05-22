@@ -1,2 +1,2 @@
 [health]
-check_ports=[8092]
+check_ports=[8092,6379]
